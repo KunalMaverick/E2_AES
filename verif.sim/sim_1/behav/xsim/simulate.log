@@ -1,0 +1,10 @@
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+Test 1 - Encryption
+Input        : 0123456789abcdef0123456789abcdef
+Key          : 0f1571c947d9e8590cb7add6af7f6798
+Encrypted    : xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Test 1 - Decryption
+Decrypted    : xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Decryption failed: Decrypted output does not match input!
+$finish called at time : 100 ns : File "/home/kunal/AES_git/AES-Verilog/AES_tb.v" Line 73

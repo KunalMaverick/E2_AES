@@ -1,0 +1,7 @@
+Running: xsim.dir/tb_subBytes_TMR_behav/xsimk -simmode gui -wdb tb_subBytes_TMR_behav.wdb -simrunnum 0 -socket 52331
+Design successfully loaded
+Design Loading Memory Usage: 33344 KB (Peak: 33420 KB)
+Design Loading CPU Usage: 20 ms
+Simulation completed
+Simulation Memory Usage: 115080 KB (Peak: 180616 KB)
+Simulation CPU Usage: 20 ms

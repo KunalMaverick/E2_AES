@@ -1,0 +1,26 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../../AES_git/AES-Verilog/AES.v" \
+"../../../../../../AES_git/AES-Verilog/AES_Decrypt.v" \
+"../../../../../../AES_git/AES-Verilog/AES_Encrypt.v" \
+"../../../../verif.srcs/sources_1/new/TTR_keyexpansion.v" \
+"../../../../../../AES_git/AES-Verilog/addRoundKey.v" \
+"../../../../../../AES_git/AES-Verilog/decryptRound.v" \
+"../../../../../../AES_git/AES-Verilog/encryptRound.v" \
+"../../../../../../AES_git/AES-Verilog/inverseMixColumns.v" \
+"../../../../../../AES_git/AES-Verilog/inverseSbox.v" \
+"../../../../../../AES_git/AES-Verilog/inverseShiftRows.v" \
+"../../../../../../AES_git/AES-Verilog/inverseSubBytes.v" \
+"../../../../../../AES_git/AES-Verilog/keyExpansion.v" \
+"../../../../verif.srcs/sources_1/new/majority.v" \
+"../../../../../../AES_git/AES-Verilog/mixColumns.v" \
+"../../../../../../AES_git/AES-Verilog/sbox.v" \
+"../../../../../../AES_git/AES-Verilog/shiftRows.v" \
+"../../../../../../AES_git/AES-Verilog/subBytes.v" \
+"../../../../../../AES_git/AES-Verilog/AES_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,1402 @@
+
+*** Running vivado
+    with args -log AES.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source AES.tcl
+
+
+****** Vivado v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source AES.tcl -notrace
+Command: synth_design -top AES -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 23881 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1354.961 ; gain = 0.000 ; free physical = 2075 ; free virtual = 38642
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'AES' [/home/kunal/AES_git/AES-Verilog/AES.v:1]
+INFO: [Synth 8-6157] synthesizing module 'AES_Encrypt' [/home/kunal/AES_git/AES-Verilog/AES_Encrypt.v:1]
+	Parameter N bound to: 128 - type: integer 
+	Parameter Nr bound to: 10 - type: integer 
+	Parameter Nk bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'encryptRound' [/home/kunal/AES_git/AES-Verilog/encryptRound.v:1]
+INFO: [Synth 8-6157] synthesizing module 'subBytes' [/home/kunal/AES_git/AES-Verilog/subBytes.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sbox' [/home/kunal/AES_git/AES-Verilog/sbox.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sbox' (1#1) [/home/kunal/AES_git/AES-Verilog/sbox.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'subBytes' (2#1) [/home/kunal/AES_git/AES-Verilog/subBytes.v:1]
+INFO: [Synth 8-6157] synthesizing module 'shiftRows' [/home/kunal/AES_git/AES-Verilog/shiftRows.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'shiftRows' (3#1) [/home/kunal/AES_git/AES-Verilog/shiftRows.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mixColumns' [/home/kunal/AES_git/AES-Verilog/mixColumns.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'mixColumns' (4#1) [/home/kunal/AES_git/AES-Verilog/mixColumns.v:1]
+INFO: [Synth 8-6157] synthesizing module 'majority' [/home/kunal/E2/verif/verif.srcs/sources_1/new/majority.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'majority' (5#1) [/home/kunal/E2/verif/verif.srcs/sources_1/new/majority.v:23]
+INFO: [Synth 8-6157] synthesizing module 'addRoundKey' [/home/kunal/AES_git/AES-Verilog/addRoundKey.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'addRoundKey' (6#1) [/home/kunal/AES_git/AES-Verilog/addRoundKey.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'encryptRound' (7#1) [/home/kunal/AES_git/AES-Verilog/encryptRound.v:1]
+INFO: [Synth 8-6157] synthesizing module 'keyExpansion' [/home/kunal/AES_git/AES-Verilog/keyExpansion.v:1]
+	Parameter nk bound to: 4 - type: integer 
+	Parameter nr bound to: 10 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'keyExpansion' (8#1) [/home/kunal/AES_git/AES-Verilog/keyExpansion.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'AES_Encrypt' (9#1) [/home/kunal/AES_git/AES-Verilog/AES_Encrypt.v:1]
+INFO: [Synth 8-6157] synthesizing module 'AES_Decrypt' [/home/kunal/AES_git/AES-Verilog/AES_Decrypt.v:1]
+	Parameter N bound to: 128 - type: integer 
+	Parameter Nr bound to: 10 - type: integer 
+	Parameter Nk bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'decryptRound' [/home/kunal/AES_git/AES-Verilog/decryptRound.v:1]
+INFO: [Synth 8-6157] synthesizing module 'inverseShiftRows' [/home/kunal/AES_git/AES-Verilog/inverseShiftRows.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'inverseShiftRows' (10#1) [/home/kunal/AES_git/AES-Verilog/inverseShiftRows.v:1]
+INFO: [Synth 8-6157] synthesizing module 'inverseSubBytes' [/home/kunal/AES_git/AES-Verilog/inverseSubBytes.v:1]
+INFO: [Synth 8-6157] synthesizing module 'inverseSbox' [/home/kunal/AES_git/AES-Verilog/inverseSbox.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'inverseSbox' (11#1) [/home/kunal/AES_git/AES-Verilog/inverseSbox.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'inverseSubBytes' (12#1) [/home/kunal/AES_git/AES-Verilog/inverseSubBytes.v:1]
+INFO: [Synth 8-6157] synthesizing module 'inverseMixColumns' [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:1]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:16]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:17]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:16]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:17]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:16]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:17]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:16]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:17]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:16]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:17]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:16]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:17]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:16]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:17]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:16]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:17]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:16]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:17]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:16]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:17]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:16]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:17]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:16]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:17]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:16]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:17]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:16]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:17]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:16]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:17]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:16]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:17]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:16]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:17]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:16]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:17]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:16]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:17]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:16]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:17]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:16]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:17]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:16]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:17]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:16]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:17]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:16]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:17]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:16]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:17]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:16]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:17]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:16]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:17]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:16]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:17]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:16]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:17]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:16]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:17]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:16]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:17]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:16]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:17]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:16]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:17]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:16]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:17]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:16]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:17]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:16]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:17]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:16]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:17]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:16]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:17]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:16]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:17]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:16]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:17]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:16]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:17]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:16]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:17]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:16]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:17]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:16]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:17]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:16]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:17]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:16]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:17]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:16]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:17]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:16]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:17]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:16]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:17]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:16]
+WARNING: [Synth 8-6104] Input port 'm_col[0].x' has an internal driver [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:17]
+INFO: [Common 17-14] Message 'Synth 8-6104' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-6155] done synthesizing module 'inverseMixColumns' (13#1) [/home/kunal/AES_git/AES-Verilog/inverseMixColumns.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'decryptRound' (14#1) [/home/kunal/AES_git/AES-Verilog/decryptRound.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'AES_Decrypt' (15#1) [/home/kunal/AES_git/AES-Verilog/AES_Decrypt.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'AES' (16#1) [/home/kunal/AES_git/AES-Verilog/AES.v:1]
+WARNING: [Synth 8-3331] design AES_Decrypt has unconnected port clk
+WARNING: [Synth 8-3331] design AES_Decrypt has unconnected port reset
+WARNING: [Synth 8-3331] design AES_Encrypt has unconnected port clk
+WARNING: [Synth 8-3331] design AES_Encrypt has unconnected port reset
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1417.508 ; gain = 62.547 ; free physical = 1992 ; free virtual = 38561
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1417.508 ; gain = 62.547 ; free physical = 1999 ; free virtual = 38567
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1425.512 ; gain = 70.551 ; free physical = 1999 ; free virtual = 38567
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1539.605 ; gain = 184.645 ; free physical = 1842 ; free virtual = 38417
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'encrypt/ar1_1' (addRoundKey) to 'encrypt/ar1_2'
+INFO: [Synth 8-223] decloning instance 'encrypt/ar1_1' (addRoundKey) to 'encrypt/ar1_3'
+INFO: [Synth 8-223] decloning instance 'encrypt/ar2_1' (addRoundKey) to 'encrypt/ar2_2'
+INFO: [Synth 8-223] decloning instance 'encrypt/ar2_1' (addRoundKey) to 'encrypt/ar2_3'
+INFO: [Synth 8-223] decloning instance 'subBytes:/sub_Bytes_TMR[0].sbox_1' (sbox) to 'subBytes:/sub_Bytes_TMR[0].sbox_2'
+INFO: [Synth 8-223] decloning instance 'subBytes:/sub_Bytes_TMR[0].sbox_1' (sbox) to 'subBytes:/sub_Bytes_TMR[0].sbox_3'
+INFO: [Synth 8-223] decloning instance 'subBytes:/sub_Bytes_TMR[8].sbox_1' (sbox) to 'subBytes:/sub_Bytes_TMR[8].sbox_2'
+INFO: [Synth 8-223] decloning instance 'subBytes:/sub_Bytes_TMR[8].sbox_1' (sbox) to 'subBytes:/sub_Bytes_TMR[8].sbox_3'
+INFO: [Synth 8-223] decloning instance 'subBytes:/sub_Bytes_TMR[16].sbox_1' (sbox) to 'subBytes:/sub_Bytes_TMR[16].sbox_2'
+INFO: [Synth 8-223] decloning instance 'subBytes:/sub_Bytes_TMR[16].sbox_1' (sbox) to 'subBytes:/sub_Bytes_TMR[16].sbox_3'
+INFO: [Synth 8-223] decloning instance 'subBytes:/sub_Bytes_TMR[24].sbox_1' (sbox) to 'subBytes:/sub_Bytes_TMR[24].sbox_2'
+INFO: [Synth 8-223] decloning instance 'subBytes:/sub_Bytes_TMR[24].sbox_1' (sbox) to 'subBytes:/sub_Bytes_TMR[24].sbox_3'
+INFO: [Synth 8-223] decloning instance 'subBytes:/sub_Bytes_TMR[32].sbox_1' (sbox) to 'subBytes:/sub_Bytes_TMR[32].sbox_2'
+INFO: [Synth 8-223] decloning instance 'subBytes:/sub_Bytes_TMR[32].sbox_1' (sbox) to 'subBytes:/sub_Bytes_TMR[32].sbox_3'
+INFO: [Synth 8-223] decloning instance 'subBytes:/sub_Bytes_TMR[40].sbox_1' (sbox) to 'subBytes:/sub_Bytes_TMR[40].sbox_2'
+INFO: [Synth 8-223] decloning instance 'subBytes:/sub_Bytes_TMR[40].sbox_1' (sbox) to 'subBytes:/sub_Bytes_TMR[40].sbox_3'
+INFO: [Synth 8-223] decloning instance 'subBytes:/sub_Bytes_TMR[48].sbox_1' (sbox) to 'subBytes:/sub_Bytes_TMR[48].sbox_2'
+INFO: [Synth 8-223] decloning instance 'subBytes:/sub_Bytes_TMR[48].sbox_1' (sbox) to 'subBytes:/sub_Bytes_TMR[48].sbox_3'
+INFO: [Synth 8-223] decloning instance 'subBytes:/sub_Bytes_TMR[56].sbox_1' (sbox) to 'subBytes:/sub_Bytes_TMR[56].sbox_2'
+INFO: [Synth 8-223] decloning instance 'subBytes:/sub_Bytes_TMR[56].sbox_1' (sbox) to 'subBytes:/sub_Bytes_TMR[56].sbox_3'
+INFO: [Synth 8-223] decloning instance 'subBytes:/sub_Bytes_TMR[64].sbox_1' (sbox) to 'subBytes:/sub_Bytes_TMR[64].sbox_2'
+INFO: [Synth 8-223] decloning instance 'subBytes:/sub_Bytes_TMR[64].sbox_1' (sbox) to 'subBytes:/sub_Bytes_TMR[64].sbox_3'
+INFO: [Synth 8-223] decloning instance 'subBytes:/sub_Bytes_TMR[72].sbox_1' (sbox) to 'subBytes:/sub_Bytes_TMR[72].sbox_2'
+INFO: [Synth 8-223] decloning instance 'subBytes:/sub_Bytes_TMR[72].sbox_1' (sbox) to 'subBytes:/sub_Bytes_TMR[72].sbox_3'
+INFO: [Synth 8-223] decloning instance 'subBytes:/sub_Bytes_TMR[80].sbox_1' (sbox) to 'subBytes:/sub_Bytes_TMR[80].sbox_2'
+INFO: [Synth 8-223] decloning instance 'subBytes:/sub_Bytes_TMR[80].sbox_1' (sbox) to 'subBytes:/sub_Bytes_TMR[80].sbox_3'
+INFO: [Synth 8-223] decloning instance 'subBytes:/sub_Bytes_TMR[88].sbox_1' (sbox) to 'subBytes:/sub_Bytes_TMR[88].sbox_2'
+INFO: [Synth 8-223] decloning instance 'subBytes:/sub_Bytes_TMR[88].sbox_1' (sbox) to 'subBytes:/sub_Bytes_TMR[88].sbox_3'
+INFO: [Synth 8-223] decloning instance 'subBytes:/sub_Bytes_TMR[96].sbox_1' (sbox) to 'subBytes:/sub_Bytes_TMR[96].sbox_2'
+INFO: [Synth 8-223] decloning instance 'subBytes:/sub_Bytes_TMR[96].sbox_1' (sbox) to 'subBytes:/sub_Bytes_TMR[96].sbox_3'
+INFO: [Synth 8-223] decloning instance 'subBytes:/sub_Bytes_TMR[104].sbox_1' (sbox) to 'subBytes:/sub_Bytes_TMR[104].sbox_2'
+INFO: [Synth 8-223] decloning instance 'subBytes:/sub_Bytes_TMR[104].sbox_1' (sbox) to 'subBytes:/sub_Bytes_TMR[104].sbox_3'
+INFO: [Synth 8-223] decloning instance 'subBytes:/sub_Bytes_TMR[112].sbox_1' (sbox) to 'subBytes:/sub_Bytes_TMR[112].sbox_2'
+INFO: [Synth 8-223] decloning instance 'subBytes:/sub_Bytes_TMR[112].sbox_1' (sbox) to 'subBytes:/sub_Bytes_TMR[112].sbox_3'
+INFO: [Synth 8-223] decloning instance 'subBytes:/sub_Bytes_TMR[120].sbox_1' (sbox) to 'subBytes:/sub_Bytes_TMR[120].sbox_2'
+INFO: [Synth 8-223] decloning instance 'subBytes:/sub_Bytes_TMR[120].sbox_1' (sbox) to 'subBytes:/sub_Bytes_TMR[120].sbox_3'
+INFO: [Synth 8-223] decloning instance 'encryptRound:/m1' (mixColumns) to 'encryptRound:/m2'
+INFO: [Synth 8-223] decloning instance 'encryptRound:/m1' (mixColumns) to 'encryptRound:/m3'
+INFO: [Synth 8-223] decloning instance 'encryptRound:/b1' (addRoundKey) to 'encryptRound:/b2'
+INFO: [Synth 8-223] decloning instance 'encryptRound:/b1' (addRoundKey) to 'encryptRound:/b3'
+
+Report RTL Partitions: 
++------+--------------+------------+----------+
+|      |RTL Partition |Replication |Instances |
++------+--------------+------------+----------+
+|1     |AES__GB0      |           1|     39648|
+|2     |AES_Decrypt   |           1|     27656|
++------+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input    128 Bit         XORs := 22    
+	   3 Input     32 Bit         XORs := 20    
+	   2 Input     32 Bit         XORs := 60    
+	   2 Input      8 Bit         XORs := 801   
+	   4 Input      8 Bit         XORs := 36    
+	   3 Input      8 Bit         XORs := 99    
+	   9 Input      8 Bit         XORs := 36    
+	   6 Input      8 Bit         XORs := 45    
+	   8 Input      8 Bit         XORs := 45    
+	   7 Input      8 Bit         XORs := 9     
+	   5 Input      8 Bit         XORs := 63    
++---Muxes : 
+	   2 Input    128 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 896   
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module AES 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input    128 Bit        Muxes := 2     
+Module keyExpansion 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input     32 Bit         XORs := 10    
+	   2 Input     32 Bit         XORs := 30    
+Module addRoundKey__13 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input    128 Bit         XORs := 1     
+Module addRoundKey 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input    128 Bit         XORs := 1     
+Module addRoundKey__14 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input    128 Bit         XORs := 1     
+Module inverseMixColumns__1 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      8 Bit         XORs := 69    
+	   4 Input      8 Bit         XORs := 2     
+	   3 Input      8 Bit         XORs := 1     
+	   9 Input      8 Bit         XORs := 4     
+	   6 Input      8 Bit         XORs := 5     
+	   8 Input      8 Bit         XORs := 5     
+	   7 Input      8 Bit         XORs := 1     
+	   5 Input      8 Bit         XORs := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 48    
+Module addRoundKey__15 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input    128 Bit         XORs := 1     
+Module inverseMixColumns__2 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      8 Bit         XORs := 69    
+	   4 Input      8 Bit         XORs := 2     
+	   3 Input      8 Bit         XORs := 1     
+	   9 Input      8 Bit         XORs := 4     
+	   6 Input      8 Bit         XORs := 5     
+	   8 Input      8 Bit         XORs := 5     
+	   7 Input      8 Bit         XORs := 1     
+	   5 Input      8 Bit         XORs := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 48    
+Module addRoundKey__16 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input    128 Bit         XORs := 1     
+Module inverseMixColumns__3 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      8 Bit         XORs := 69    
+	   4 Input      8 Bit         XORs := 2     
+	   3 Input      8 Bit         XORs := 1     
+	   9 Input      8 Bit         XORs := 4     
+	   6 Input      8 Bit         XORs := 5     
+	   8 Input      8 Bit         XORs := 5     
+	   7 Input      8 Bit         XORs := 1     
+	   5 Input      8 Bit         XORs := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 48    
+Module addRoundKey__17 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input    128 Bit         XORs := 1     
+Module inverseMixColumns__4 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      8 Bit         XORs := 69    
+	   4 Input      8 Bit         XORs := 2     
+	   3 Input      8 Bit         XORs := 1     
+	   9 Input      8 Bit         XORs := 4     
+	   6 Input      8 Bit         XORs := 5     
+	   8 Input      8 Bit         XORs := 5     
+	   7 Input      8 Bit         XORs := 1     
+	   5 Input      8 Bit         XORs := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 48    
+Module addRoundKey__18 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input    128 Bit         XORs := 1     
+Module inverseMixColumns__5 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      8 Bit         XORs := 69    
+	   4 Input      8 Bit         XORs := 2     
+	   3 Input      8 Bit         XORs := 1     
+	   9 Input      8 Bit         XORs := 4     
+	   6 Input      8 Bit         XORs := 5     
+	   8 Input      8 Bit         XORs := 5     
+	   7 Input      8 Bit         XORs := 1     
+	   5 Input      8 Bit         XORs := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 48    
+Module addRoundKey__19 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input    128 Bit         XORs := 1     
+Module inverseMixColumns__6 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      8 Bit         XORs := 69    
+	   4 Input      8 Bit         XORs := 2     
+	   3 Input      8 Bit         XORs := 1     
+	   9 Input      8 Bit         XORs := 4     
+	   6 Input      8 Bit         XORs := 5     
+	   8 Input      8 Bit         XORs := 5     
+	   7 Input      8 Bit         XORs := 1     
+	   5 Input      8 Bit         XORs := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 48    
+Module addRoundKey__20 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input    128 Bit         XORs := 1     
+Module inverseMixColumns__7 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      8 Bit         XORs := 69    
+	   4 Input      8 Bit         XORs := 2     
+	   3 Input      8 Bit         XORs := 1     
+	   9 Input      8 Bit         XORs := 4     
+	   6 Input      8 Bit         XORs := 5     
+	   8 Input      8 Bit         XORs := 5     
+	   7 Input      8 Bit         XORs := 1     
+	   5 Input      8 Bit         XORs := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 48    
+Module addRoundKey__21 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input    128 Bit         XORs := 1     
+Module inverseMixColumns__8 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      8 Bit         XORs := 69    
+	   4 Input      8 Bit         XORs := 2     
+	   3 Input      8 Bit         XORs := 1     
+	   9 Input      8 Bit         XORs := 4     
+	   6 Input      8 Bit         XORs := 5     
+	   8 Input      8 Bit         XORs := 5     
+	   7 Input      8 Bit         XORs := 1     
+	   5 Input      8 Bit         XORs := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 48    
+Module addRoundKey__12 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input    128 Bit         XORs := 1     
+Module inverseMixColumns 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      8 Bit         XORs := 69    
+	   4 Input      8 Bit         XORs := 2     
+	   3 Input      8 Bit         XORs := 1     
+	   9 Input      8 Bit         XORs := 4     
+	   6 Input      8 Bit         XORs := 5     
+	   8 Input      8 Bit         XORs := 5     
+	   7 Input      8 Bit         XORs := 1     
+	   5 Input      8 Bit         XORs := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 48    
+Module keyExpansion__1 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input     32 Bit         XORs := 10    
+	   2 Input     32 Bit         XORs := 30    
+Module addRoundKey__2 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input    128 Bit         XORs := 1     
+Module subBytes 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 32    
+Module addRoundKey__11 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input    128 Bit         XORs := 1     
+Module subBytes__2 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 32    
+Module mixColumns__1 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      8 Bit         XORs := 20    
+	   3 Input      8 Bit         XORs := 10    
+	   5 Input      8 Bit         XORs := 6     
+	   4 Input      8 Bit         XORs := 2     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 16    
+Module addRoundKey__3 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input    128 Bit         XORs := 1     
+Module subBytes__3 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 32    
+Module mixColumns__2 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      8 Bit         XORs := 20    
+	   3 Input      8 Bit         XORs := 10    
+	   5 Input      8 Bit         XORs := 6     
+	   4 Input      8 Bit         XORs := 2     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 16    
+Module addRoundKey__4 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input    128 Bit         XORs := 1     
+Module subBytes__4 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 32    
+Module mixColumns__3 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      8 Bit         XORs := 20    
+	   3 Input      8 Bit         XORs := 10    
+	   5 Input      8 Bit         XORs := 6     
+	   4 Input      8 Bit         XORs := 2     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 16    
+Module addRoundKey__5 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input    128 Bit         XORs := 1     
+Module subBytes__5 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 32    
+Module mixColumns__4 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      8 Bit         XORs := 20    
+	   3 Input      8 Bit         XORs := 10    
+	   5 Input      8 Bit         XORs := 6     
+	   4 Input      8 Bit         XORs := 2     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 16    
+Module addRoundKey__6 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input    128 Bit         XORs := 1     
+Module subBytes__6 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 32    
+Module mixColumns__5 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      8 Bit         XORs := 20    
+	   3 Input      8 Bit         XORs := 10    
+	   5 Input      8 Bit         XORs := 6     
+	   4 Input      8 Bit         XORs := 2     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 16    
+Module addRoundKey__7 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input    128 Bit         XORs := 1     
+Module subBytes__7 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 32    
+Module mixColumns__6 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      8 Bit         XORs := 20    
+	   3 Input      8 Bit         XORs := 10    
+	   5 Input      8 Bit         XORs := 6     
+	   4 Input      8 Bit         XORs := 2     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 16    
+Module addRoundKey__8 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input    128 Bit         XORs := 1     
+Module subBytes__8 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 32    
+Module mixColumns__7 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      8 Bit         XORs := 20    
+	   3 Input      8 Bit         XORs := 10    
+	   5 Input      8 Bit         XORs := 6     
+	   4 Input      8 Bit         XORs := 2     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 16    
+Module addRoundKey__9 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input    128 Bit         XORs := 1     
+Module subBytes__9 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 32    
+Module mixColumns__8 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      8 Bit         XORs := 20    
+	   3 Input      8 Bit         XORs := 10    
+	   5 Input      8 Bit         XORs := 6     
+	   4 Input      8 Bit         XORs := 2     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 16    
+Module addRoundKey__10 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input    128 Bit         XORs := 1     
+Module subBytes__1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 32    
+Module mixColumns 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      8 Bit         XORs := 20    
+	   3 Input      8 Bit         XORs := 10    
+	   5 Input      8 Bit         XORs := 6     
+	   4 Input      8 Bit         XORs := 2     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 16    
+Module addRoundKey__1 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input    128 Bit         XORs := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:40 ; elapsed = 00:01:50 . Memory (MB): peak = 1846.590 ; gain = 491.629 ; free physical = 1640 ; free virtual = 38294
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++----------------+-----------------------------+---------------+----------------+
+|Module Name     | RTL Object                  | Depth x Width | Implemented As | 
++----------------+-----------------------------+---------------+----------------+
+|keyExpansion    | c2                          | 256x8         | LUT            | 
+|keyExpansion    | c1                          | 256x8         | LUT            | 
+|keyExpansion    | c0                          | 256x8         | LUT            | 
+|keyExpansion    | c                           | 256x8         | LUT            | 
+|keyExpansion    | c6                          | 256x8         | LUT            | 
+|keyExpansion    | c5                          | 256x8         | LUT            | 
+|keyExpansion    | c4                          | 256x8         | LUT            | 
+|keyExpansion    | c3                          | 256x8         | LUT            | 
+|keyExpansion    | c10                         | 256x8         | LUT            | 
+|keyExpansion    | c9                          | 256x8         | LUT            | 
+|keyExpansion    | c8                          | 256x8         | LUT            | 
+|keyExpansion    | c7                          | 256x8         | LUT            | 
+|keyExpansion    | c14                         | 256x8         | LUT            | 
+|keyExpansion    | c13                         | 256x8         | LUT            | 
+|keyExpansion    | c12                         | 256x8         | LUT            | 
+|keyExpansion    | c11                         | 256x8         | LUT            | 
+|keyExpansion    | c18                         | 256x8         | LUT            | 
+|keyExpansion    | c17                         | 256x8         | LUT            | 
+|keyExpansion    | c16                         | 256x8         | LUT            | 
+|keyExpansion    | c15                         | 256x8         | LUT            | 
+|keyExpansion    | c22                         | 256x8         | LUT            | 
+|keyExpansion    | c21                         | 256x8         | LUT            | 
+|keyExpansion    | c20                         | 256x8         | LUT            | 
+|keyExpansion    | c19                         | 256x8         | LUT            | 
+|keyExpansion    | c26                         | 256x8         | LUT            | 
+|keyExpansion    | c25                         | 256x8         | LUT            | 
+|keyExpansion    | c24                         | 256x8         | LUT            | 
+|keyExpansion    | c23                         | 256x8         | LUT            | 
+|keyExpansion    | c30                         | 256x8         | LUT            | 
+|keyExpansion    | c29                         | 256x8         | LUT            | 
+|keyExpansion    | c28                         | 256x8         | LUT            | 
+|keyExpansion    | c27                         | 256x8         | LUT            | 
+|keyExpansion    | c34                         | 256x8         | LUT            | 
+|keyExpansion    | c33                         | 256x8         | LUT            | 
+|keyExpansion    | c32                         | 256x8         | LUT            | 
+|keyExpansion    | c31                         | 256x8         | LUT            | 
+|keyExpansion    | c38                         | 256x8         | LUT            | 
+|keyExpansion    | c37                         | 256x8         | LUT            | 
+|keyExpansion    | c36                         | 256x8         | LUT            | 
+|keyExpansion    | c35                         | 256x8         | LUT            | 
+|sbox            | c                           | 256x8         | LUT            | 
+|inverseSbox     | sbout                       | 256x8         | LUT            | 
+|keyExpansion    | c2                          | 256x8         | LUT            | 
+|keyExpansion    | c1                          | 256x8         | LUT            | 
+|keyExpansion    | c0                          | 256x8         | LUT            | 
+|keyExpansion    | c                           | 256x8         | LUT            | 
+|keyExpansion    | c6                          | 256x8         | LUT            | 
+|keyExpansion    | c5                          | 256x8         | LUT            | 
+|keyExpansion    | c4                          | 256x8         | LUT            | 
+|keyExpansion    | c3                          | 256x8         | LUT            | 
+|keyExpansion    | c10                         | 256x8         | LUT            | 
+|keyExpansion    | c9                          | 256x8         | LUT            | 
+|keyExpansion    | c8                          | 256x8         | LUT            | 
+|keyExpansion    | c7                          | 256x8         | LUT            | 
+|keyExpansion    | c14                         | 256x8         | LUT            | 
+|keyExpansion    | c13                         | 256x8         | LUT            | 
+|keyExpansion    | c12                         | 256x8         | LUT            | 
+|keyExpansion    | c11                         | 256x8         | LUT            | 
+|keyExpansion    | c18                         | 256x8         | LUT            | 
+|keyExpansion    | c17                         | 256x8         | LUT            | 
+|keyExpansion    | c16                         | 256x8         | LUT            | 
+|keyExpansion    | c15                         | 256x8         | LUT            | 
+|keyExpansion    | c22                         | 256x8         | LUT            | 
+|keyExpansion    | c21                         | 256x8         | LUT            | 
+|keyExpansion    | c20                         | 256x8         | LUT            | 
+|keyExpansion    | c19                         | 256x8         | LUT            | 
+|keyExpansion    | c26                         | 256x8         | LUT            | 
+|keyExpansion    | c25                         | 256x8         | LUT            | 
+|keyExpansion    | c24                         | 256x8         | LUT            | 
+|keyExpansion    | c23                         | 256x8         | LUT            | 
+|keyExpansion    | c30                         | 256x8         | LUT            | 
+|keyExpansion    | c29                         | 256x8         | LUT            | 
+|keyExpansion    | c28                         | 256x8         | LUT            | 
+|keyExpansion    | c27                         | 256x8         | LUT            | 
+|keyExpansion    | c34                         | 256x8         | LUT            | 
+|keyExpansion    | c33                         | 256x8         | LUT            | 
+|keyExpansion    | c32                         | 256x8         | LUT            | 
+|keyExpansion    | c31                         | 256x8         | LUT            | 
+|keyExpansion    | c38                         | 256x8         | LUT            | 
+|keyExpansion    | c37                         | 256x8         | LUT            | 
+|keyExpansion    | c36                         | 256x8         | LUT            | 
+|keyExpansion    | c35                         | 256x8         | LUT            | 
+|inverseSubBytes | sub_Bytes[0].s/sbout        | 256x8         | LUT            | 
+|inverseSubBytes | sub_Bytes[8].s/sbout        | 256x8         | LUT            | 
+|inverseSubBytes | sub_Bytes[16].s/sbout       | 256x8         | LUT            | 
+|inverseSubBytes | sub_Bytes[24].s/sbout       | 256x8         | LUT            | 
+|inverseSubBytes | sub_Bytes[32].s/sbout       | 256x8         | LUT            | 
+|inverseSubBytes | sub_Bytes[40].s/sbout       | 256x8         | LUT            | 
+|inverseSubBytes | sub_Bytes[48].s/sbout       | 256x8         | LUT            | 
+|inverseSubBytes | sub_Bytes[56].s/sbout       | 256x8         | LUT            | 
+|inverseSubBytes | sub_Bytes[64].s/sbout       | 256x8         | LUT            | 
+|inverseSubBytes | sub_Bytes[72].s/sbout       | 256x8         | LUT            | 
+|inverseSubBytes | sub_Bytes[80].s/sbout       | 256x8         | LUT            | 
+|inverseSubBytes | sub_Bytes[88].s/sbout       | 256x8         | LUT            | 
+|inverseSubBytes | sub_Bytes[96].s/sbout       | 256x8         | LUT            | 
+|inverseSubBytes | sub_Bytes[104].s/sbout      | 256x8         | LUT            | 
+|inverseSubBytes | sub_Bytes[112].s/sbout      | 256x8         | LUT            | 
+|inverseSubBytes | sub_Bytes[120].s/sbout      | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[0].s/sbout      | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[8].s/sbout      | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[32].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[48].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[56].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[64].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[72].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[80].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[88].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[96].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[104].s/sbout    | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[112].s/sbout    | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[120].s/sbout    | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[0].s/sbout      | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[8].s/sbout      | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[16].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[24].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[32].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[40].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[48].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[56].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[64].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[72].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[80].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[96].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[112].s/sbout    | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[0].s/sbout      | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[8].s/sbout      | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[16].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[24].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[32].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[40].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[48].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[56].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[64].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[72].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[80].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[88].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[96].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[104].s/sbout    | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[112].s/sbout    | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[120].s/sbout    | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[0].s/sbout      | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[8].s/sbout      | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[16].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[24].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[32].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[40].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[48].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[56].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[64].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[72].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[80].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[88].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[96].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[104].s/sbout    | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[112].s/sbout    | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[120].s/sbout    | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[0].s/sbout      | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[8].s/sbout      | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[16].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[24].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[32].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[40].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[48].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[56].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[64].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[72].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[80].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[88].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[96].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[104].s/sbout    | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[112].s/sbout    | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[120].s/sbout    | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[0].s/sbout      | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[8].s/sbout      | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[16].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[24].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[32].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[40].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[48].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[56].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[64].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[72].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[80].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[88].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[96].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[104].s/sbout    | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[112].s/sbout    | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[120].s/sbout    | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[0].s/sbout      | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[8].s/sbout      | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[16].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[24].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[32].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[40].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[48].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[56].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[64].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[72].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[80].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[88].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[96].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[104].s/sbout    | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[112].s/sbout    | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[120].s/sbout    | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[0].s/sbout      | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[8].s/sbout      | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[16].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[24].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[32].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[40].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[48].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[56].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[64].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[72].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[80].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[88].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[96].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[104].s/sbout    | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[112].s/sbout    | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[120].s/sbout    | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[0].s/sbout      | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[8].s/sbout      | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[16].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[24].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[32].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[40].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[48].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[56].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[64].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[72].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[80].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[88].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[96].s/sbout     | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[104].s/sbout    | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[112].s/sbout    | 256x8         | LUT            | 
+|decryptRound    | s/sub_Bytes[120].s/sbout    | 256x8         | LUT            | 
+|keyExpansion    | c2                          | 256x8         | LUT            | 
+|keyExpansion    | c1                          | 256x8         | LUT            | 
+|keyExpansion    | c0                          | 256x8         | LUT            | 
+|keyExpansion    | c                           | 256x8         | LUT            | 
+|keyExpansion    | c6                          | 256x8         | LUT            | 
+|keyExpansion    | c5                          | 256x8         | LUT            | 
+|keyExpansion    | c4                          | 256x8         | LUT            | 
+|keyExpansion    | c3                          | 256x8         | LUT            | 
+|keyExpansion    | c10                         | 256x8         | LUT            | 
+|keyExpansion    | c9                          | 256x8         | LUT            | 
+|keyExpansion    | c8                          | 256x8         | LUT            | 
+|keyExpansion    | c7                          | 256x8         | LUT            | 
+|keyExpansion    | c14                         | 256x8         | LUT            | 
+|keyExpansion    | c13                         | 256x8         | LUT            | 
+|keyExpansion    | c12                         | 256x8         | LUT            | 
+|keyExpansion    | c11                         | 256x8         | LUT            | 
+|keyExpansion    | c18                         | 256x8         | LUT            | 
+|keyExpansion    | c17                         | 256x8         | LUT            | 
+|keyExpansion    | c16                         | 256x8         | LUT            | 
+|keyExpansion    | c15                         | 256x8         | LUT            | 
+|keyExpansion    | c22                         | 256x8         | LUT            | 
+|keyExpansion    | c21                         | 256x8         | LUT            | 
+|keyExpansion    | c20                         | 256x8         | LUT            | 
+|keyExpansion    | c19                         | 256x8         | LUT            | 
+|keyExpansion    | c26                         | 256x8         | LUT            | 
+|keyExpansion    | c25                         | 256x8         | LUT            | 
+|keyExpansion    | c24                         | 256x8         | LUT            | 
+|keyExpansion    | c23                         | 256x8         | LUT            | 
+|keyExpansion    | c30                         | 256x8         | LUT            | 
+|keyExpansion    | c29                         | 256x8         | LUT            | 
+|keyExpansion    | c28                         | 256x8         | LUT            | 
+|keyExpansion    | c27                         | 256x8         | LUT            | 
+|keyExpansion    | c34                         | 256x8         | LUT            | 
+|keyExpansion    | c33                         | 256x8         | LUT            | 
+|keyExpansion    | c32                         | 256x8         | LUT            | 
+|keyExpansion    | c31                         | 256x8         | LUT            | 
+|keyExpansion    | c38                         | 256x8         | LUT            | 
+|keyExpansion    | c37                         | 256x8         | LUT            | 
+|keyExpansion    | c36                         | 256x8         | LUT            | 
+|keyExpansion    | c35                         | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[0].sbox_1/c   | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[8].sbox_1/c   | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[16].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[24].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[32].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[40].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[48].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[56].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[64].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[72].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[80].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[88].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[96].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[104].sbox_1/c | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[112].sbox_1/c | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[120].sbox_1/c | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[0].sbox_1/c   | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[8].sbox_1/c   | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[16].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[24].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[32].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[40].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[48].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[56].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[64].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[72].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[80].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[88].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[96].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[104].sbox_1/c | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[112].sbox_1/c | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[120].sbox_1/c | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[0].sbox_1/c   | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[8].sbox_1/c   | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[16].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[24].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[32].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[40].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[48].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[56].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[64].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[72].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[80].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[88].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[96].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[104].sbox_1/c | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[112].sbox_1/c | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[120].sbox_1/c | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[0].sbox_1/c   | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[8].sbox_1/c   | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[16].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[24].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[32].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[40].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[48].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[56].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[64].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[72].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[80].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[88].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[96].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[104].sbox_1/c | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[112].sbox_1/c | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[120].sbox_1/c | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[0].sbox_1/c   | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[8].sbox_1/c   | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[16].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[24].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[32].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[40].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[48].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[56].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[64].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[72].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[80].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[88].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[96].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[104].sbox_1/c | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[112].sbox_1/c | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[120].sbox_1/c | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[0].sbox_1/c   | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[8].sbox_1/c   | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[16].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[24].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[32].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[40].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[48].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[56].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[64].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[72].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[80].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[88].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[96].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[104].sbox_1/c | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[112].sbox_1/c | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[120].sbox_1/c | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[0].sbox_1/c   | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[8].sbox_1/c   | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[16].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[24].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[32].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[40].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[48].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[56].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[64].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[72].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[80].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[88].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[96].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[104].sbox_1/c | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[112].sbox_1/c | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[120].sbox_1/c | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[0].sbox_1/c   | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[8].sbox_1/c   | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[16].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[24].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[32].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[40].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[48].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[56].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[64].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[72].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[80].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[88].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[96].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[104].sbox_1/c | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[112].sbox_1/c | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[120].sbox_1/c | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[0].sbox_1/c   | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[8].sbox_1/c   | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[16].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[24].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[32].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[40].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[48].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[56].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[64].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[72].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[80].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[88].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[96].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[104].sbox_1/c | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[112].sbox_1/c | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[120].sbox_1/c | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[0].sbox_1/c   | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[8].sbox_1/c   | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[16].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[24].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[32].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[40].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[48].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[56].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[64].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[72].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[80].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[88].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[96].sbox_1/c  | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[104].sbox_1/c | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[112].sbox_1/c | 256x8         | LUT            | 
+|subBytes        | sub_Bytes_TMR[120].sbox_1/c | 256x8         | LUT            | 
++----------------+-----------------------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+--------------+------------+----------+
+|      |RTL Partition |Replication |Instances |
++------+--------------+------------+----------+
+|1     |AES__GB0      |           1|     23542|
+|2     |AES_Decrypt   |           1|     21914|
++------+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:40 ; elapsed = 00:01:51 . Memory (MB): peak = 1846.590 ; gain = 491.629 ; free physical = 1640 ; free virtual = 38294
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+--------------+------------+----------+
+|      |RTL Partition |Replication |Instances |
++------+--------------+------------+----------+
+|1     |AES__GB0      |           1|     23542|
+|2     |AES_Decrypt   |           1|     21914|
++------+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:47 ; elapsed = 00:01:58 . Memory (MB): peak = 1846.590 ; gain = 491.629 ; free physical = 1706 ; free virtual = 38361
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:50 ; elapsed = 00:02:00 . Memory (MB): peak = 1846.590 ; gain = 491.629 ; free physical = 1704 ; free virtual = 38360
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:50 ; elapsed = 00:02:00 . Memory (MB): peak = 1846.590 ; gain = 491.629 ; free physical = 1709 ; free virtual = 38364
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:51 ; elapsed = 00:02:02 . Memory (MB): peak = 1846.590 ; gain = 491.629 ; free physical = 1709 ; free virtual = 38364
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:53 ; elapsed = 00:02:03 . Memory (MB): peak = 1846.590 ; gain = 491.629 ; free physical = 1711 ; free virtual = 38366
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:53 ; elapsed = 00:02:04 . Memory (MB): peak = 1846.590 ; gain = 491.629 ; free physical = 1711 ; free virtual = 38366
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:53 ; elapsed = 00:02:04 . Memory (MB): peak = 1846.590 ; gain = 491.629 ; free physical = 1711 ; free virtual = 38366
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------+------+
+|      |Cell  |Count |
++------+------+------+
+|1     |LUT2  |  1839|
+|2     |LUT3  |   914|
+|3     |LUT4  |   620|
+|4     |LUT5  |  1206|
+|5     |LUT6  | 16346|
+|6     |MUXF7 |  6258|
+|7     |MUXF8 |  3040|
+|8     |IBUF  |   257|
+|9     |OBUF  |   256|
++------+------+------+
+
+Report Instance Areas: 
++------+------------------------------------+-----------------+------+
+|      |Instance                            |Module           |Cells |
++------+------------------------------------+-----------------+------+
+|1     |top                                 |                 | 30736|
+|2     |  decrypt                           |AES_Decrypt      |  6662|
+|3     |    ke                              |keyExpansion_176 |  5731|
+|4     |  encrypt                           |AES_Encrypt      | 14117|
+|5     |    ke                              |keyExpansion     |  9032|
+|6     |    \loop[1].er                     |encryptRound     |  1629|
+|7     |      s                             |subBytes_159     |  1629|
+|8     |        \sub_Bytes_TMR[0].sbox_1    |sbox_160         |   161|
+|9     |        \sub_Bytes_TMR[104].sbox_1  |sbox_161         |    85|
+|10    |        \sub_Bytes_TMR[112].sbox_1  |sbox_162         |   121|
+|11    |        \sub_Bytes_TMR[120].sbox_1  |sbox_163         |    77|
+|12    |        \sub_Bytes_TMR[16].sbox_1   |sbox_164         |   122|
+|13    |        \sub_Bytes_TMR[24].sbox_1   |sbox_165         |    80|
+|14    |        \sub_Bytes_TMR[32].sbox_1   |sbox_166         |    80|
+|15    |        \sub_Bytes_TMR[40].sbox_1   |sbox_167         |   247|
+|16    |        \sub_Bytes_TMR[48].sbox_1   |sbox_168         |    38|
+|17    |        \sub_Bytes_TMR[56].sbox_1   |sbox_169         |   201|
+|18    |        \sub_Bytes_TMR[64].sbox_1   |sbox_170         |    76|
+|19    |        \sub_Bytes_TMR[72].sbox_1   |sbox_171         |   165|
+|20    |        \sub_Bytes_TMR[80].sbox_1   |sbox_172         |    80|
+|21    |        \sub_Bytes_TMR[88].sbox_1   |sbox_173         |    30|
+|22    |        \sub_Bytes_TMR[8].sbox_1    |sbox_174         |    31|
+|23    |        \sub_Bytes_TMR[96].sbox_1   |sbox_175         |    35|
+|24    |    \loop[2].er                     |encryptRound_0   |   384|
+|25    |      s                             |subBytes_142     |   384|
+|26    |        \sub_Bytes_TMR[0].sbox_1    |sbox_143         |    24|
+|27    |        \sub_Bytes_TMR[104].sbox_1  |sbox_144         |    24|
+|28    |        \sub_Bytes_TMR[112].sbox_1  |sbox_145         |    24|
+|29    |        \sub_Bytes_TMR[120].sbox_1  |sbox_146         |    24|
+|30    |        \sub_Bytes_TMR[16].sbox_1   |sbox_147         |    24|
+|31    |        \sub_Bytes_TMR[24].sbox_1   |sbox_148         |    24|
+|32    |        \sub_Bytes_TMR[32].sbox_1   |sbox_149         |    24|
+|33    |        \sub_Bytes_TMR[40].sbox_1   |sbox_150         |    24|
+|34    |        \sub_Bytes_TMR[48].sbox_1   |sbox_151         |    24|
+|35    |        \sub_Bytes_TMR[56].sbox_1   |sbox_152         |    24|
+|36    |        \sub_Bytes_TMR[64].sbox_1   |sbox_153         |    24|
+|37    |        \sub_Bytes_TMR[72].sbox_1   |sbox_154         |    24|
+|38    |        \sub_Bytes_TMR[80].sbox_1   |sbox_155         |    24|
+|39    |        \sub_Bytes_TMR[88].sbox_1   |sbox_156         |    24|
+|40    |        \sub_Bytes_TMR[8].sbox_1    |sbox_157         |    24|
+|41    |        \sub_Bytes_TMR[96].sbox_1   |sbox_158         |    24|
+|42    |    \loop[3].er                     |encryptRound_1   |   384|
+|43    |      s                             |subBytes_125     |   384|
+|44    |        \sub_Bytes_TMR[0].sbox_1    |sbox_126         |    24|
+|45    |        \sub_Bytes_TMR[104].sbox_1  |sbox_127         |    24|
+|46    |        \sub_Bytes_TMR[112].sbox_1  |sbox_128         |    24|
+|47    |        \sub_Bytes_TMR[120].sbox_1  |sbox_129         |    24|
+|48    |        \sub_Bytes_TMR[16].sbox_1   |sbox_130         |    24|
+|49    |        \sub_Bytes_TMR[24].sbox_1   |sbox_131         |    24|
+|50    |        \sub_Bytes_TMR[32].sbox_1   |sbox_132         |    24|
+|51    |        \sub_Bytes_TMR[40].sbox_1   |sbox_133         |    24|
+|52    |        \sub_Bytes_TMR[48].sbox_1   |sbox_134         |    24|
+|53    |        \sub_Bytes_TMR[56].sbox_1   |sbox_135         |    24|
+|54    |        \sub_Bytes_TMR[64].sbox_1   |sbox_136         |    24|
+|55    |        \sub_Bytes_TMR[72].sbox_1   |sbox_137         |    24|
+|56    |        \sub_Bytes_TMR[80].sbox_1   |sbox_138         |    24|
+|57    |        \sub_Bytes_TMR[88].sbox_1   |sbox_139         |    24|
+|58    |        \sub_Bytes_TMR[8].sbox_1    |sbox_140         |    24|
+|59    |        \sub_Bytes_TMR[96].sbox_1   |sbox_141         |    24|
+|60    |    \loop[4].er                     |encryptRound_2   |   384|
+|61    |      s                             |subBytes_108     |   384|
+|62    |        \sub_Bytes_TMR[0].sbox_1    |sbox_109         |    24|
+|63    |        \sub_Bytes_TMR[104].sbox_1  |sbox_110         |    24|
+|64    |        \sub_Bytes_TMR[112].sbox_1  |sbox_111         |    24|
+|65    |        \sub_Bytes_TMR[120].sbox_1  |sbox_112         |    24|
+|66    |        \sub_Bytes_TMR[16].sbox_1   |sbox_113         |    24|
+|67    |        \sub_Bytes_TMR[24].sbox_1   |sbox_114         |    24|
+|68    |        \sub_Bytes_TMR[32].sbox_1   |sbox_115         |    24|
+|69    |        \sub_Bytes_TMR[40].sbox_1   |sbox_116         |    24|
+|70    |        \sub_Bytes_TMR[48].sbox_1   |sbox_117         |    24|
+|71    |        \sub_Bytes_TMR[56].sbox_1   |sbox_118         |    24|
+|72    |        \sub_Bytes_TMR[64].sbox_1   |sbox_119         |    24|
+|73    |        \sub_Bytes_TMR[72].sbox_1   |sbox_120         |    24|
+|74    |        \sub_Bytes_TMR[80].sbox_1   |sbox_121         |    24|
+|75    |        \sub_Bytes_TMR[88].sbox_1   |sbox_122         |    24|
+|76    |        \sub_Bytes_TMR[8].sbox_1    |sbox_123         |    24|
+|77    |        \sub_Bytes_TMR[96].sbox_1   |sbox_124         |    24|
+|78    |    \loop[5].er                     |encryptRound_3   |   384|
+|79    |      s                             |subBytes_91      |   384|
+|80    |        \sub_Bytes_TMR[0].sbox_1    |sbox_92          |    24|
+|81    |        \sub_Bytes_TMR[104].sbox_1  |sbox_93          |    24|
+|82    |        \sub_Bytes_TMR[112].sbox_1  |sbox_94          |    24|
+|83    |        \sub_Bytes_TMR[120].sbox_1  |sbox_95          |    24|
+|84    |        \sub_Bytes_TMR[16].sbox_1   |sbox_96          |    24|
+|85    |        \sub_Bytes_TMR[24].sbox_1   |sbox_97          |    24|
+|86    |        \sub_Bytes_TMR[32].sbox_1   |sbox_98          |    24|
+|87    |        \sub_Bytes_TMR[40].sbox_1   |sbox_99          |    24|
+|88    |        \sub_Bytes_TMR[48].sbox_1   |sbox_100         |    24|
+|89    |        \sub_Bytes_TMR[56].sbox_1   |sbox_101         |    24|
+|90    |        \sub_Bytes_TMR[64].sbox_1   |sbox_102         |    24|
+|91    |        \sub_Bytes_TMR[72].sbox_1   |sbox_103         |    24|
+|92    |        \sub_Bytes_TMR[80].sbox_1   |sbox_104         |    24|
+|93    |        \sub_Bytes_TMR[88].sbox_1   |sbox_105         |    24|
+|94    |        \sub_Bytes_TMR[8].sbox_1    |sbox_106         |    24|
+|95    |        \sub_Bytes_TMR[96].sbox_1   |sbox_107         |    24|
+|96    |    \loop[6].er                     |encryptRound_4   |   384|
+|97    |      s                             |subBytes_74      |   384|
+|98    |        \sub_Bytes_TMR[0].sbox_1    |sbox_75          |    24|
+|99    |        \sub_Bytes_TMR[104].sbox_1  |sbox_76          |    24|
+|100   |        \sub_Bytes_TMR[112].sbox_1  |sbox_77          |    24|
+|101   |        \sub_Bytes_TMR[120].sbox_1  |sbox_78          |    24|
+|102   |        \sub_Bytes_TMR[16].sbox_1   |sbox_79          |    24|
+|103   |        \sub_Bytes_TMR[24].sbox_1   |sbox_80          |    24|
+|104   |        \sub_Bytes_TMR[32].sbox_1   |sbox_81          |    24|
+|105   |        \sub_Bytes_TMR[40].sbox_1   |sbox_82          |    24|
+|106   |        \sub_Bytes_TMR[48].sbox_1   |sbox_83          |    24|
+|107   |        \sub_Bytes_TMR[56].sbox_1   |sbox_84          |    24|
+|108   |        \sub_Bytes_TMR[64].sbox_1   |sbox_85          |    24|
+|109   |        \sub_Bytes_TMR[72].sbox_1   |sbox_86          |    24|
+|110   |        \sub_Bytes_TMR[80].sbox_1   |sbox_87          |    24|
+|111   |        \sub_Bytes_TMR[88].sbox_1   |sbox_88          |    24|
+|112   |        \sub_Bytes_TMR[8].sbox_1    |sbox_89          |    24|
+|113   |        \sub_Bytes_TMR[96].sbox_1   |sbox_90          |    24|
+|114   |    \loop[7].er                     |encryptRound_5   |   384|
+|115   |      s                             |subBytes_57      |   384|
+|116   |        \sub_Bytes_TMR[0].sbox_1    |sbox_58          |    24|
+|117   |        \sub_Bytes_TMR[104].sbox_1  |sbox_59          |    24|
+|118   |        \sub_Bytes_TMR[112].sbox_1  |sbox_60          |    24|
+|119   |        \sub_Bytes_TMR[120].sbox_1  |sbox_61          |    24|
+|120   |        \sub_Bytes_TMR[16].sbox_1   |sbox_62          |    24|
+|121   |        \sub_Bytes_TMR[24].sbox_1   |sbox_63          |    24|
+|122   |        \sub_Bytes_TMR[32].sbox_1   |sbox_64          |    24|
+|123   |        \sub_Bytes_TMR[40].sbox_1   |sbox_65          |    24|
+|124   |        \sub_Bytes_TMR[48].sbox_1   |sbox_66          |    24|
+|125   |        \sub_Bytes_TMR[56].sbox_1   |sbox_67          |    24|
+|126   |        \sub_Bytes_TMR[64].sbox_1   |sbox_68          |    24|
+|127   |        \sub_Bytes_TMR[72].sbox_1   |sbox_69          |    24|
+|128   |        \sub_Bytes_TMR[80].sbox_1   |sbox_70          |    24|
+|129   |        \sub_Bytes_TMR[88].sbox_1   |sbox_71          |    24|
+|130   |        \sub_Bytes_TMR[8].sbox_1    |sbox_72          |    24|
+|131   |        \sub_Bytes_TMR[96].sbox_1   |sbox_73          |    24|
+|132   |    \loop[8].er                     |encryptRound_6   |   384|
+|133   |      s                             |subBytes_40      |   384|
+|134   |        \sub_Bytes_TMR[0].sbox_1    |sbox_41          |    24|
+|135   |        \sub_Bytes_TMR[104].sbox_1  |sbox_42          |    24|
+|136   |        \sub_Bytes_TMR[112].sbox_1  |sbox_43          |    24|
+|137   |        \sub_Bytes_TMR[120].sbox_1  |sbox_44          |    24|
+|138   |        \sub_Bytes_TMR[16].sbox_1   |sbox_45          |    24|
+|139   |        \sub_Bytes_TMR[24].sbox_1   |sbox_46          |    24|
+|140   |        \sub_Bytes_TMR[32].sbox_1   |sbox_47          |    24|
+|141   |        \sub_Bytes_TMR[40].sbox_1   |sbox_48          |    24|
+|142   |        \sub_Bytes_TMR[48].sbox_1   |sbox_49          |    24|
+|143   |        \sub_Bytes_TMR[56].sbox_1   |sbox_50          |    24|
+|144   |        \sub_Bytes_TMR[64].sbox_1   |sbox_51          |    24|
+|145   |        \sub_Bytes_TMR[72].sbox_1   |sbox_52          |    24|
+|146   |        \sub_Bytes_TMR[80].sbox_1   |sbox_53          |    24|
+|147   |        \sub_Bytes_TMR[88].sbox_1   |sbox_54          |    24|
+|148   |        \sub_Bytes_TMR[8].sbox_1    |sbox_55          |    24|
+|149   |        \sub_Bytes_TMR[96].sbox_1   |sbox_56          |    24|
+|150   |    \loop[9].er                     |encryptRound_7   |   384|
+|151   |      s                             |subBytes_23      |   384|
+|152   |        \sub_Bytes_TMR[0].sbox_1    |sbox_24          |    24|
+|153   |        \sub_Bytes_TMR[104].sbox_1  |sbox_25          |    24|
+|154   |        \sub_Bytes_TMR[112].sbox_1  |sbox_26          |    24|
+|155   |        \sub_Bytes_TMR[120].sbox_1  |sbox_27          |    24|
+|156   |        \sub_Bytes_TMR[16].sbox_1   |sbox_28          |    24|
+|157   |        \sub_Bytes_TMR[24].sbox_1   |sbox_29          |    24|
+|158   |        \sub_Bytes_TMR[32].sbox_1   |sbox_30          |    24|
+|159   |        \sub_Bytes_TMR[40].sbox_1   |sbox_31          |    24|
+|160   |        \sub_Bytes_TMR[48].sbox_1   |sbox_32          |    24|
+|161   |        \sub_Bytes_TMR[56].sbox_1   |sbox_33          |    24|
+|162   |        \sub_Bytes_TMR[64].sbox_1   |sbox_34          |    24|
+|163   |        \sub_Bytes_TMR[72].sbox_1   |sbox_35          |    24|
+|164   |        \sub_Bytes_TMR[80].sbox_1   |sbox_36          |    24|
+|165   |        \sub_Bytes_TMR[88].sbox_1   |sbox_37          |    24|
+|166   |        \sub_Bytes_TMR[8].sbox_1    |sbox_38          |    24|
+|167   |        \sub_Bytes_TMR[96].sbox_1   |sbox_39          |    24|
+|168   |    sb                              |subBytes         |   384|
+|169   |      \sub_Bytes_TMR[0].sbox_1      |sbox             |    24|
+|170   |      \sub_Bytes_TMR[104].sbox_1    |sbox_8           |    24|
+|171   |      \sub_Bytes_TMR[112].sbox_1    |sbox_9           |    24|
+|172   |      \sub_Bytes_TMR[120].sbox_1    |sbox_10          |    24|
+|173   |      \sub_Bytes_TMR[16].sbox_1     |sbox_11          |    24|
+|174   |      \sub_Bytes_TMR[24].sbox_1     |sbox_12          |    24|
+|175   |      \sub_Bytes_TMR[32].sbox_1     |sbox_13          |    24|
+|176   |      \sub_Bytes_TMR[40].sbox_1     |sbox_14          |    24|
+|177   |      \sub_Bytes_TMR[48].sbox_1     |sbox_15          |    24|
+|178   |      \sub_Bytes_TMR[56].sbox_1     |sbox_16          |    24|
+|179   |      \sub_Bytes_TMR[64].sbox_1     |sbox_17          |    24|
+|180   |      \sub_Bytes_TMR[72].sbox_1     |sbox_18          |    24|
+|181   |      \sub_Bytes_TMR[80].sbox_1     |sbox_19          |    24|
+|182   |      \sub_Bytes_TMR[88].sbox_1     |sbox_20          |    24|
+|183   |      \sub_Bytes_TMR[8].sbox_1      |sbox_21          |    24|
+|184   |      \sub_Bytes_TMR[96].sbox_1     |sbox_22          |    24|
++------+------------------------------------+-----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:53 ; elapsed = 00:02:04 . Memory (MB): peak = 1846.590 ; gain = 491.629 ; free physical = 1711 ; free virtual = 38366
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 580 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:53 ; elapsed = 00:02:04 . Memory (MB): peak = 1846.590 ; gain = 491.629 ; free physical = 1715 ; free virtual = 38370
+Synthesis Optimization Complete : Time (s): cpu = 00:01:53 ; elapsed = 00:02:04 . Memory (MB): peak = 1846.598 ; gain = 491.629 ; free physical = 1715 ; free virtual = 38370
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 9298 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1870.602 ; gain = 0.000 ; free physical = 1661 ; free virtual = 38317
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+82 Infos, 104 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:01 ; elapsed = 00:02:11 . Memory (MB): peak = 1870.602 ; gain = 515.641 ; free physical = 1721 ; free virtual = 38376
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 1870.602 ; gain = 0.000 ; free physical = 1721 ; free virtual = 38377
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/home/kunal/E2/verif/verif.runs/synth_1/AES.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1894.613 ; gain = 24.012 ; free physical = 1737 ; free virtual = 38397
+INFO: [runtcl-4] Executing : report_utilization -file AES_utilization_synth.rpt -pb AES_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Nov 18 21:12:38 2024...
